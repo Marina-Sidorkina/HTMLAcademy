@@ -1,0 +1,336 @@
+.promo {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+  margin-top: -1px;
+  font-family: $default-font;
+  font-weight: 700;
+  color: $white;
+  background-color: #f9f9f9;
+  border-top: 1px solid $gray--light;
+}
+
+.promo__container {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.promo__description {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 260px;
+  min-height: 282px;
+  margin: 0 auto;
+  background-image: url("../img/hero-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: -157px -18.5px;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/hero-mobile@2x.jpg");
+    background-size: 575px 373px;
+  }
+}
+
+.promo__align {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+  font-size: 27px;
+  line-height: 30px;
+  color: $black;
+  text-align: center;
+}
+
+.promo__items {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.promo__item {
+  box-sizing: border-box;
+  width: 100%;
+  height: 103px;
+  font-family: $default-font;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 24px;
+  color: $white;
+  text-decoration: none;
+}
+
+.promo__item--interior {
+  background-color: $blue;
+}
+
+.promo__wrapper--interior::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  right: 6px;
+  width: 40px;
+  height: 62px;
+  background: transparent url("../img/icon-interior.svg") no-repeat;
+  opacity: 0.5;
+}
+
+.promo__item--interior:hover {
+  background-color: #59d5bc;
+}
+
+.promo__item--interior:hover .promo__wrapper--interior::before {
+  opacity: 0.7;
+}
+
+.promo__item--interior:active {
+  background-color: #59d5bc;
+}
+
+.promo__item--interior:active .promo__wrapper--interior::before {
+  opacity: 0.3;
+}
+
+.promo__item--interior:active .promo__title--interior {
+  opacity: 0.3;
+}
+
+.promo__item--toy {
+  background-color: #56c3b2;
+}
+
+.promo__item--toy:hover {
+  background-color: #46c1ae;
+}
+
+.promo__item--toy:hover .promo__wrapper--toy::before {
+  opacity: 0.7;
+}
+
+.promo__item--toy:active {
+  background-color: #46c1ae;
+}
+
+.promo__item--toy:active .promo__wrapper--toy::before {
+  opacity: 0.3;
+}
+
+.promo__item--toy:active .promo__title--toy {
+  opacity: 0.3;
+}
+
+.promo__wrapper--toy::before {
+  content: "";
+  position: absolute;
+  top: 21px;
+  right: -4px;
+  width: 60px;
+  height: 60px;
+  background: transparent url("../img/icon-toy.svg") no-repeat;
+  opacity: 0.5;
+}
+
+.promo__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  width: 260px;
+  height: 103px;
+  margin: 0 auto;
+}
+
+.promo__title--interior {
+  width: 105px;
+  margin-top: -6px;
+  margin-left: -1px;
+}
+
+.promo__title--toy {
+  width: 89px;
+  margin-top: -6px;
+}
+
+@media (min-width: $tablet-width) {
+  .promo {
+    box-sizing: border-box;
+    width: 100%;
+    height: 745px;
+    margin-top: -67px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    border-top: 1px solid $gray--light;
+    background-color: #f9f9f9;
+  }
+
+  .promo__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    width: 100%;
+    height: 627px;
+    padding-top: 65px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .promo__description {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    width: 668px;
+    min-height: 562px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 18px;
+    background-image: url("../img/hero-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: 1150px 746px;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/hero-tablet@2x.jpg");
+      background-size: 1150px 746px;
+    }
+    background-position: -240px -65.5px;
+  }
+
+  .promo__align {
+    width: 500px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .promo__break {
+    display: none;
+  }
+
+  .promo__items {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 668px;
+    height: 118px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .promo__items::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: -11px;
+    width: 768px;
+    height: 24px;
+    background: url("../img/bg-zigzag-fill.svg") repeat-x;
+    background-size: 768px 26px;
+  }
+
+  .promo__wrapper {
+    align-items: flex-start;
+    width: 334px;
+    padding-left: 36px;
+    padding-top: 34px;
+  }
+
+  .promo__item {
+    width: 334px;
+    height: auto;
+    margin-top: -0.5px;
+  }
+
+  .promo__item:hover {
+    height: 123px;
+    transform: translateY(-5px);
+  }
+
+  .promo__items:hover .promo__items::after {
+    bottom: -7px;
+  }
+
+  .promo__item--interior {
+    margin-left: 1.5px;
+  }
+
+  .promo__wrapper--interior::before {
+    top: 30px;
+    right: 35px;
+    margin-right: 1.5px;
+  }
+
+  .promo__wrapper--toy::before {
+    top: 30px;
+    right: 35px;
+    margin-right: -1px;
+    margin-top: 1.5px;
+  }
+
+  .promo__title--interior {
+    width: 120px;
+    min-height: 65px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .promo__title--toy {
+    width: 105px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo {
+    margin-top: -66.5px;
+  }
+
+  .promo__description {
+    width: $desktop-content-width;
+    min-height: 628px;
+    padding-top: 18px;
+    background-image: url("../img/hero-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: 1150px 746px;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/hero-desktop@2x.jpg");
+      background-size: 1150px 746px;
+    }
+    background-position: -49px -66px;
+  }
+
+  .promo__align {
+    width: 650px;
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .promo__items {
+    width: $desktop-content-width;
+  }
+
+  .promo__items::after {
+    content: "";
+    position: absolute;
+    bottom: -17px;
+    left: -99px;
+    width: 1250px;
+    height: 34px;
+    background: url("../img/bg-zigzag-fill.svg");
+    background-repeat: repeat-x;
+    background-size: 1250px 38px;
+  }
+
+  .promo__wrapper {
+    width: 525px;
+  }
+
+  .promo__item {
+    width: 525px;
+  }
+}

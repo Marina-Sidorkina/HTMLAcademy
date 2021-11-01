@@ -1,0 +1,15 @@
+{
+    "name": "marina_sidorkina/yeti",
+    "description": "HTML Academy",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marina Sidorkina",
+            "email": "m.sidorkina55@gmail.com"
+        }
+    ],
+    "require": {
+        "swiftmailer/swiftmailer": "^6.2"
+    }
+}

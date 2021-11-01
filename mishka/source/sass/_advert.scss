@@ -1,0 +1,331 @@
+.advert {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 0 43px;
+  font-family: $default-font;
+  font-weight: 400;
+  color: $black;
+  background-color: $white;
+}
+
+.advert::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  right: 0;
+  width: 100%;
+  height: 6px;
+  background: transparent url("../img/bg-zigzag-line.svg") repeat-x;
+}
+
+.advert__container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.advert__header {
+  display: block;
+  box-sizing: border-box;
+  margin: 27px 0 0 1px;
+  font-family: $default-font;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.advert__category {
+  display: block;
+  box-sizing: border-box;
+  margin: 4.5px 0 0;
+  font-family: $default-font;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: $blue;
+  text-transform: uppercase;
+}
+
+.advert__description {
+  margin: 23.5px 0 0 1px;
+  padding: 0;
+  font-family: $default-font;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: $gray;
+}
+
+.advert__specification {
+  margin: 0 0 28.5px;
+}
+
+.advert__add {
+  display: flex;
+  flex-direction: column;
+}
+
+.advert__illustration {
+  width: 260px;
+  height: 315px;
+  margin-left: 0.5px;
+  background-color: #f1f1f1;
+}
+
+.advert__img {
+  width: 260px;
+  height: 315px;
+}
+
+.advert__price {
+  box-sizing: border-box;
+  width: 260px;
+  min-height: 74px;
+  margin-left: -1.5px;
+  padding-top: 23.5px;
+  font-family: $default-font;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: $gray;
+  text-align: center;
+}
+
+.advert__order {
+  box-sizing: border-box;
+  width: 259px;
+  min-height: 52px;
+  margin-left: 0.5px;
+  padding-top: 13.5px;
+  font-family: $default-font;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: $gray;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid $gray;
+}
+
+.advert__order:hover {
+  color: $white;
+  background-color: $gray;
+}
+/*Светлый тон фона кнопки задан через opacity,
+так как в фотошопе он определяется как №444444 ($gray),
+то есть как и у ховера, но визуально явно светлей*/
+.advert__order:active {
+  color: rgba(255, 255, 255, 0.302);
+  background-color: $gray;
+}
+
+@media (min-width: $tablet-width) {
+  .advert {
+    width: $tablet-width;
+    padding-bottom: 68px;
+  }
+
+  .advert::after {
+    bottom: 0;
+    width: 100%;
+    height: 17px;
+    background: url("../img/bg-zigzag-line.svg") repeat-x;
+    background-position: 0 0;
+    background-size: 768px 17px;
+    transform: rotate(180deg);
+  }
+
+  .advert__container {
+    display: flex;
+    flex-direction: column;
+    width: $tablet-content-width;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .advert__wrapper {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: $tablet-content-width;
+    height: 140px;
+  }
+
+  .advert__header {
+    box-sizing: border-box;
+    width: 568px;
+    min-height: 149px;
+    margin: 0;
+    padding: 51px 0 0;
+    margin-left: -2px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .advert__category {
+    box-sizing: border-box;
+    min-height: 155px;
+    width: 100px;
+    margin: 0;
+    padding: 65.5px 0 0;
+    margin-right: 12px;
+    font-size: 17px;
+    line-height: 17px;
+    text-align: center;
+  }
+
+  .advert__description {
+    order: 2;
+    box-sizing: border-box;
+    width: 50%;
+    height: 120px;
+    margin-top: -412px;
+    padding-right: 34px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .advert__specification {
+    order: 3;
+    width: 50%;
+    height: 120px;
+    margin: 0;
+  }
+
+  .advert__add {
+    order: 4;
+    justify-content: flex-end;
+    width: 293px;
+    min-height: 164px;
+  }
+
+  .advert__price {
+    width: 100%;
+    height: 114px;
+    padding-top: 56px;
+    font-size: 20px;
+  }
+
+  .advert__order {
+    width: 292px;
+    margin-left: -0.5px;
+  }
+
+  .advert__illustration {
+    order: 1;
+    width: 333px;
+    height: 404px;
+    margin-left: auto;
+    margin-top: 14px;
+  }
+
+  .advert__img {
+    width: 333px;
+    height: 404px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advert {
+    width: $desktop-content-width;
+    margin-top: 71px;
+    padding-bottom: 98px;
+  }
+
+  .advert::after {
+    bottom: 0;
+    width: 100%;
+    height: 26px;
+    background: url("../img/bg-zigzag-line.svg") repeat-x;
+    background-position: 0 0;
+    background-size: 1050px 26px;
+    transform: rotate(180deg);
+  }
+
+  .advert__container {
+    width: $desktop-content-width;
+  }
+
+  .advert__wrapper {
+    z-index: 10;
+    width: $desktop-content-width;
+    min-height: 165px;
+  }
+
+  .advert__header {
+    width: 875px;
+    min-height: 165px;
+    margin-left: -14px;
+    padding-top: 54px;
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .advert__category {
+    order: -1;
+    width: 175px;
+    min-height: 155px;
+    padding-top: 64px;
+    padding-left: 42px;
+    padding-right: 50px;
+    text-align: center;
+  }
+
+  .advert__description {
+    order: 2;
+    width: 320px;
+    min-height: 120px;
+    margin-top: -478px;
+    margin-left: 175px;
+    padding-left: 2px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .advert__specification {
+    width: 291px;
+    height: 120px;
+    margin: 0 0 0 175px;
+  }
+
+  .advert__add {
+    width: 291px;
+    min-height: 200px;
+    margin-left: 176px;
+  }
+
+  .advert__price {
+    width: 291px;
+    height: 150px;
+    margin-top: 0;
+    margin-left: 1px;
+    padding-top: 109px;
+    padding-left: 0;
+    font-size: 20px;
+  }
+
+  .advert__order {
+    width: 293px;
+    margin-top: 17px;
+    padding-top: 14px;
+  }
+
+  .advert__illustration {
+    index: -10;
+    width: 525px;
+    height: 636px;
+    margin-top: -164px;
+  }
+
+  .advert__img {
+    width: 525px;
+    height: 636px;
+  }
+}

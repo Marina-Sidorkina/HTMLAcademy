@@ -1,0 +1,48 @@
+.size {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 260px;
+  height: 52px;
+}
+
+.size__radio {
+  display: none;
+}
+
+.size__radio + .size__button {
+  display: block;
+  box-sizing: border-box;
+  width: 82px;
+  height: 52px;
+  padding-top: 17px;
+  font-family: $default-font;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 17px;
+  color: $gray;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid $gray--light;
+  cursor: pointer;
+}
+
+.size__radio:hover + .size__button {
+  border: 2px solid #c7c7c7;
+}
+
+.size__radio:checked + .size__button {
+  border: 2px solid #62d1ba;
+}
+
+@media (min-width: $tablet-width) {
+  .size {
+    width: 354px;
+  }
+
+  .size__radio + .size__button {
+    width: 113px;
+  }
+}

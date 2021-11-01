@@ -1,0 +1,142 @@
+.email {
+  display: block;
+  box-sizing: border-box;
+  width: 320px;
+}
+
+.email__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 260px;
+  height: 107px;
+  margin: 0 auto;
+}
+
+.email__legend {
+  position: relative;
+  margin: 8.5px 0 6.5px;
+  padding: 0;
+  font-family: $default-font;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 17px;
+  color: $blue;
+  text-transform: uppercase;
+}
+
+.email__legend::after {
+  content: "";
+  position: absolute;
+  top: 55%;
+  right: 0;
+  display: block;
+  width: 179px;
+  height: 1px;
+  background-color: #62d1ba;
+}
+
+.email__input {
+  box-sizing: border-box;
+  height: 52px;
+  font-family: $default-font;
+  font-size: 17px;
+  line-height: 18px;
+  color: #d2d2d2;
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid $black;
+  outline: transparent;
+}
+
+.email__svg {
+  display: block;
+  position: absolute;
+  top: 43px;
+  right: 4px;
+  fill: #cccccc;
+}
+
+.email__input:hover {
+  border-bottom: 2px solid #62d1ba;
+}
+
+.email__input:focus {
+  color: $gray;
+  border-bottom: 2px solid #62d1ba;
+}
+
+.email__input:hover + .email__svg {
+  fill: #62d1ba;
+}
+
+.email__input:focus + .email__svg {
+  fill: #62d1ba;
+}
+
+@media (min-width: $tablet-width) {
+  .email {
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 50px;
+    padding-bottom: 48px;
+    background-color: #f1f1f1;
+  }
+
+  .email__container {
+    display: flex;
+    flex-direction: row;
+    width: $tablet-content-width;
+    height: 77px;
+    padding-left: 2px;
+  }
+
+  .email__legend {
+    box-sizing: border-box;
+    width: 167px;
+    height: 77px;
+    margin: 0;
+    padding: 40px 0 0;
+  }
+
+  .email__legend::after {
+    display: none;
+  }
+
+  .email__input {
+    box-sizing: border-box;
+    width: 501px;
+    height: 76px;
+    margin: 0;
+    padding: 20px 0 0 17px;
+    font-size: 19px;
+    line-height: 19px;
+    background-color: #f1f1f1;
+  }
+
+  .email__svg {
+    right: 21px;
+    top: 34px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .email__container {
+    width: $desktop-content-width;
+    padding-left: 0;
+  }
+
+  .email__legend {
+    width: 175px;
+    padding-left: 62px;
+  }
+
+  .email__input {
+    width: 700px;
+  }
+
+  .email__svg {
+    right: 178px;
+  }
+}

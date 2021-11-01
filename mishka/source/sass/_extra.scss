@@ -1,0 +1,135 @@
+.extra {
+  box-sizing: border-box;
+  width: 320px;
+  height: 79px;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  color: $black;
+}
+
+.extra__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 260px;
+  height: 79px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.extra__link {
+  width: 86px;
+  height: 35px;
+  margin-right: 66.5px;
+  cursor: pointer;
+}
+
+.extra__link:hover {
+  opacity: 0.6;
+}
+
+.extra__link:active {
+  opacity: 0.3;
+}
+
+.extra__link--index {
+  opacity: 1;
+  cursor: default;
+}
+
+.extra__link--index:hover {
+  opacity: 1;
+}
+
+.extra__link--index:active {
+  fill: $black;
+}
+
+.extra__dropdown {
+  display: flex;
+  align-items: center;
+  width: 21px;
+  height: 35px;
+  margin-top: -1px;
+}
+
+.extra__button {
+  width: 21px;
+  height: 15px;
+  font-size: 0;
+  border: 0;
+  cursor: pointer;
+  background: url("../img/icon-menu-open.svg") no-repeat;
+  background-position: top center;
+  outline: none;
+}
+
+.extra__button--opened {
+  width: 22px;
+  height: 22px;
+  font-size: 0;
+  border: 0;
+  cursor: pointer;
+  background: url("../img/icon-menu-close.svg") no-repeat;
+  background-position: center;
+}
+
+.extra__button--opened .page-body {
+  margin-top: 395px;
+}
+
+@media (min-width: $tablet-width) {
+  .extra {
+    box-sizing: border-box;
+    width: 321px;
+    height: 89px;
+    order: 0;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+  }
+
+  .extra__container {
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 321px;
+    height: 89px;
+    padding-top: 22px;
+  }
+
+  .extra__dropdown {
+    display: none;
+  }
+
+  .extra__link {
+    width: 112.5px;
+    height: 46.2px;
+    margin-left: -0.5px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .extra {
+    order: 1;
+    box-sizing: border-box;
+    width: 260px;
+    height: 89px;
+  }
+
+  .extra__container {
+    width: 260px;
+    padding-top: 8.5px;
+    padding-left: 12px;
+  }
+
+  .extra__link {
+    width: 148.5px;
+    height: 73px;
+  }
+}

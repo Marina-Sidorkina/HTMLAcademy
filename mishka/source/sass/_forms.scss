@@ -1,0 +1,131 @@
+.forms__list {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 320px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.forms__send {
+  display: block;
+  box-sizing: border-box;
+  width: 320px;
+  padding: 0;
+  margin: 0 auto;
+  background-color: $white;
+}
+
+.forms__container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.forms__note {
+  box-sizing: border-box;
+  min-height: 63px;
+  padding: 0;
+  margin: 0;
+  padding-top: 15px;
+  font-family: $default-font;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: $gray;
+}
+
+.forms__button {
+  box-sizing: border-box;
+  width: 260px;
+  height: 52px;
+  margin-bottom: 55px;
+  font-family: $default-font;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 17px;
+  color: $gray;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid $gray;
+  background-color: $white;
+  cursor: pointer;
+  outline: transparent;
+}
+
+.forms__button:hover {
+  color: $white;
+  background-color: $gray;
+}
+/*Светлый тон фона кнопки задан через opacity,
+так как в фотошопе он определяется как №444444 ($gray),
+то есть как и у ховера, но визуально явно светлей*/
+.forms__button:active {
+  color: rgba(255, 255, 255, 0.302);
+  background-color: $gray;
+}
+
+@media (min-width: $tablet-width) {
+  .forms__list {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .forms__send {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .forms__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: $tablet-content-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .forms__note {
+    order: 1;
+    width: 302px;
+    height: 52px;
+    margin: 0 -2px 0 0;
+    padding: 9px 0 0;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .forms__button {
+    width: 231px;
+    height: 52px;
+    margin: 0;
+    padding: 0;
+    margin-left: 1px;
+    padding-left: 29px;
+    text-align: left;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .forms__container {
+    width: $desktop-content-width;
+  }
+
+  .forms__send {
+    margin-bottom: 39px;
+  }
+
+  .forms__note {
+    margin-right: 173px;
+    padding-top: 10px;
+  }
+
+  .forms__button {
+    margin-left: 175px;
+  }
+}

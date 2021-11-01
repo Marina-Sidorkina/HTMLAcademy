@@ -1,0 +1,242 @@
+.type {
+  display: block;
+  box-sizing: border-box;
+  width: 320px;
+  padding: 0;
+  margin: 0 auto;
+  background-color: $white;
+}
+
+.type__container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.type__legend {
+  position: relative;
+  padding: 0;
+  margin: 23px 0 26px;
+  font-family: $default-font;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 17px;
+  color: $blue;
+  text-transform: uppercase;
+}
+
+.type__legend::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: block;
+  width: 198px;
+  height: 1px;
+  background-color: #62d1ba;
+}
+
+.type__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.type__radio {
+  display: none;
+}
+
+.type__option {
+  display: block;
+  box-sizing: border-box;
+  width: 260px;
+  height: 60px;
+  padding: 0;
+  margin: 0;
+}
+
+.type__radio + .type__descr {
+  position: relative;
+  display: block;
+  padding-left: 63px;
+  padding-top: 7.5px;
+  font-family: $default-font;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  color: $black;
+  cursor: pointer;
+}
+
+.type__radio + .type__descr::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: -0.5px;
+  display: block;
+  box-sizing: border-box;
+  width: 39px;
+  height: 39px;
+  background-color: $white;
+  border: 2px solid $gray;
+  border-radius: 50%;
+}
+
+.type__radio + .type__descr::after {
+  content: "";
+  position: absolute;
+  left: 13px;
+  top: 11.5px;
+  display: none;
+  box-sizing: border-box;
+  width: 15px;
+  height: 15px;
+  background-color: #62d1ba;
+  border-radius: 50%;
+}
+
+.type__radio:checked + .type__descr::after {
+  display: block;
+}
+
+.type__radio:hover + .type__descr::before {
+  border: 1px solid #62d1ba;
+}
+
+.type__radio:active + .type__descr::before {
+  border: 1px solid #c7c7c7;
+}
+
+.type__radio:active + .type__descr::after {
+  display: block;
+}
+
+.type__radio:checked:hover + .type__descr::before {
+  border: 1px solid #62d1ba;
+}
+
+.type__radio:checked:active + .type__descr::before {
+  border: 1px solid #c7c7c7;
+}
+
+.type__radio:checked:active + .type__descr::after {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .type {
+    width: 100%;
+    padding-bottom: 26px;
+  }
+
+  .type__container {
+    display: flex;
+    flex-direction: column;
+    width: $tablet-content-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .type__legend {
+    box-sizing: border-box;
+    width: 167px;
+    min-height: 152px;
+    padding: 0;
+    margin: 0;
+    padding-top: 17px;
+    padding-left: 2px;
+    font-size: 17;
+    line-height: 17px;
+  }
+
+  .type__legend::after {
+    display: none;
+  }
+
+  .type__list {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 501px;
+    min-height: 152px;
+    margin-left: 167px;
+    margin-top: -152px;
+  }
+
+  .type__option {
+    width: 501px;
+    min-height: 76px;
+    padding: 0;
+  }
+
+  .type__descr {
+    box-sizing: border-box;
+    width: 501px;
+    min-height: 76px;
+    margin: 0;
+    padding: 0;
+    font-size: 19px;
+    line-height: 19px;
+  }
+
+  .type__radio + .type__descr {
+    padding: 0;
+    margin: 0;
+    padding-left: 81px;
+    padding-top: 14.5px;
+    font-size: 19px;
+    line-height: 19px;
+  }
+
+  .type__radio + .type__descr::before {
+    top: 0.5px;
+    left: 0.5px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .type__radio + .type__descr::after {
+    left: 16px;
+    top: 16px;
+    width: 20.5px;
+    height: 20.5px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .type {
+    width: 100%;
+    padding-bottom: 25px;
+  }
+
+  .type__container {
+    width: $desktop-content-width;
+  }
+
+  .type__legend {
+    width: 175px;
+    padding-left: 65px;
+  }
+
+  .type__list {
+    width: 875px;
+    margin-left: 175px;
+  }
+
+  .type__descr {
+    width: 875px;
+  }
+
+  .type__radio + .type__descr::before {
+    top: 0;
+    left: 0.5px;
+  }
+
+  .type__radio + .type__descr::after {
+    left: 16px;
+    top: 15.5px;
+  }
+}

@@ -1,0 +1,131 @@
+.navigation {
+  display: none;
+  width: 320px;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+  background-color: $white;
+}
+
+.navigation--show {
+  display: block;
+}
+
+.navigation__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.navigation__item {
+  box-sizing: border-box;
+  width: 320px;
+  height: 79px;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation__link {
+  display: block;
+  box-sizing: border-box;
+  width: 320px;
+  height: 79px;
+  margin: 0;
+  padding: 30px 0 0 77px;
+  font-family: $default-font;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: $black;
+  text-decoration: none;
+  border-bottom: 1px solid $gray--light;
+}
+
+.navigation__link:hover {
+  opacity: 0.6;
+}
+
+.navigation__link:active {
+  opacity: 0.3;
+}
+
+.navigation__link--catalog:hover,
+.navigation__link--form:hover {
+  color: $black;
+  opacity: 1;
+}
+
+.navigation__link--catalog:active,
+.navigation__link--form:active {
+  color: $black;
+  opacity: 1;
+}
+
+@media (min-width: $tablet-width) {
+  .navigation {
+    display: flex;
+    order: 2;
+    box-sizing: border-box;
+    width: 405px;
+    min-height: 65px;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+  }
+
+  .navigation__list {
+    box-sizing: border-box;
+    width: 405px;
+    min-height: 65px;
+  }
+
+  .navigation__item {
+    width: 167px;
+    height: 65px;
+  }
+
+  .navigation__link {
+    width: 167px;
+    height: 65px;
+    padding-left: 1px;
+    padding-top: 17.5px;
+    font-size: 15px;
+    border: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .navigation {
+    order: 0;
+    width: 440px;
+    min-height: 89px;
+  }
+
+  .navigation__list {
+    box-sizing: border-box;
+    width: 440px;
+    min-height: 89px;
+  }
+
+  .navigation__item {
+    width: 185px;
+    height: 89px;
+  }
+
+  .navigation__link {
+    height: 89px;
+    padding-top: 32px;
+    padding-left: 0;
+    font-size: 17px;
+    border: none;
+  }
+
+  .navigation__item--border {
+    width: 185px;
+    margin-right: 35px;
+    border-right: 1px solid $gray--light;
+  }
+}

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Нёрдс</title>
+    <link href="css/normalize.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <!--РАЗДЕЛ - ШАПКА САЙТА-->
+    <header class="main-header">
+      <div class="header-container container">
+        <!--ЛОГОТИП-->
+        <a class="logo">
+          <img src="img/header-logo.png" width="160" height="65" alt="logo">
+        </a>
+        <!--НАВИГАЦИЯ ПО САЙТУ-->
+        <nav class="navigation-block">
+          <ul class="navigation-items-list">
+            <li class="navigation-item">
+              <a class="navigation-item-link" href="#">
+                Студия
+              </a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-item-link" href="#">
+                Клиенты
+              </a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-item-link" href="catalog.html">
+                Магазин
+              </a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-item-link" href="#">
+                Контакты
+              </a>
+            </li>
+          </ul>
+          <a class="cart-link" href="#">
+            Корзина
+          </a>
+        </nav>
+        <!--БЛОК - ПРОМО-->
+        <section class="promo-container">
+          <input class="btn-for-slide btn-1" type="radio" id="btn-1" name="toggle" checked>
+          <input class="btn-for-slide btn-2" type="radio" id="btn-2" name="toggle">
+          <input class="btn-for-slide btn-3" type="radio" id="btn-3" name="toggle">
+          <div class="slider-controls">
+            <label class="slider-controls-label" for="btn-1" aria-label="Включение-первого-слайда"></label>
+            <label class="slider-controls-label" for="btn-2" aria-label="Включение-второго-слайда"></label>
+            <label class="slider-controls-label" for="btn-3" aria-label="Включение-третьего-слайда"></label>
+          </div>	
+        <!--ПЕРВЫЙ СЛАЙД-->
+          <div class="promo promo-slide-1">
+            <h1 class="promo-header">
+              Долго, дорого, скрупулезно.
+            </h1>
+            <p class="promo-text">
+              Математически выверенный дизайн<br> для вашего сайта или мобильного приложения. 
+            </p>
+            <a class="btn promo-button" href="#">
+              Узнать больше
+            </a>
+          </div>
+          <!--ВТОРОЙ СЛАЙД-->
+          <div class="promo promo-slide-2">
+            <h1 class="promo-header">
+              Любим математику как никто другой
+            </h1>
+            <p class="promo-text">
+              Никакого креатива, только математические формулы для расчета идеальных пропорций. 
+            </p>
+            <a class="btn promo-button" href="#">
+              Узнать больше
+            </a>
+          </div>
+          <!--ТРЕТИЙ СЛАЙД-->
+          <div class="promo promo-slide-3">
+            <h1 class="promo-header">
+              Только ночь, только хардкор
+            </h1>
+            <p class="promo-text">
+              Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается. 
+            </p>
+            <a class="btn promo-button" href="#">
+              Узнать больше
+            </a>
+          </div>
+        </section>
+      </div>
+    </header>
+    <!--РАЗДЕЛ - ОСНОВНОЕ СОДЕРЖАНИЕ СТРАНИЦЫ-->
+    <main>
+      <div class="main-container container">
+        <!--БЛОК - ВИДЫ УСЛУГ-->
+        <section class="services">
+          <!--САЙТЫ-->
+          <div class="services-item web-sites">
+            <h2 class="services-header">
+              Веб-сайты
+            </h2>
+            <p class="services-text">
+              Мир никогда 
+              <span class="for-letter-spacing">
+                не будет прежним
+              </span> 
+              после того 
+              <span class="for-letter-spacing">
+                как увидит ваш сайт!
+              </span>
+            </p>
+            <a class="btn" href="#">
+              Заказать
+            </a>
+          </div>
+          <!--ПРИЛОЖЕНИЯ-->
+          <div class="services-item applications">
+            <h2 class="services-header">
+              Приложения
+            </h2>
+            <p class="services-text">
+              Покорите топ-10 приложений в AppStore и Google Play
+            </p>
+            <a class="btn" href="#">
+              Заказать
+            </a>
+          </div>
+          <!--ПРЕЗЕНТАЦИИ-->
+          <div class="services-item presentations">
+            <h2 class="services-header">
+              Презентации
+            </h2>
+            <p class="services-text">
+              Вы даже не подозреваете, насколько вы изумительны!
+            </p>
+            <a class="btn" href="#">
+              Заказать
+            </a>
+          </div>
+        </section>
+        <!--БЛОК - ИНФОРМАЦИЯ О КОМПАНИИ-->
+        <section class="about-company">
+          <!--О НАС-->
+          <div class="about-us">
+            <p class="about-us-header">
+              Мы &mdash; маленькая, но гордая 
+              <span class="for-letter-spacing">
+                дизайн-студия из Краснодара.
+              </span>
+            </p>
+            <p class="about-us-text">
+              Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.
+            </p>
+            <b class="about-us-subheader">
+              Выполняем заказы на 
+              <span class="for-letter-spacing">
+                разработку:
+              </span>
+            </b>
+            <ul class="order-types">
+              <li class="order-types-item">
+                Веб-сайтов любой сложности
+              </li>
+              <li class="order-types-item">
+                Мобильных приложений для iOS и Android
+              </li>
+              <li class="order-types-item">
+                Слайдшоу и видео для корпоративных презентаций
+              </li>
+            </ul>
+          </div>
+          <!--СТАТИСТИКА-->
+          <div class="statistics">
+            <img class="illustration" src="img/statistics-logo.jpg" width="360" height="208" alt="NЁRDS DESIGN STUDIO">
+            <b class="statistics-header">
+              C 2004 года любим точность во всем:
+            </b>
+            <ul class="statistics-list">
+            <!--первая колонка-->
+              <li class="data-1 statistics-list-item">
+                <b class="statistics-list-values">
+                  146 <span class="percents">&#037;</span>
+                </b>
+                <span class="statistics-list-parameters">
+                  <span class="first-row">
+                    Уровень
+                  </span>
+                  <span class="second-row">
+                    самоотдачи
+                  </span>
+                </span>
+              </li>
+              <!--вторая колонка-->
+              <li class="data-2 statistics-list-item">
+                <b class="statistics-list-values">
+                  100 <span class="percents">&#037;</span>
+                </b>
+                <span class="statistics-list-parameters">
+                  <span class="first-row">
+                    Соблюдение
+                  </span>
+                  <span class="second-row">
+                    сроков
+                  </span>
+                </span>
+              </li>
+              <!--третья колонка-->
+              <li class="data-3 statistics-list-item">
+                <b class="statistics-list-values">
+                  50 <span class="percents">&#037;</span>
+                </b>
+                <span class="statistics-list-parameters">
+                  <span class="first-row">
+                    Минимальная
+                  </span>
+                  <span class="second-row">
+                    предоплата
+                  </span>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!--БЛОК - ПАРТНЕРЫ-->
+        <section class="our-partners">
+          <a class="partner first-partner" href="https://htmlacademy.ru/intensive/htmlcss">
+            <img class="partner-img first-partner-img" src="img/our-partners-img-1.png" width="199" height="68" alt="first-partner">
+          </a>
+          <a class="partner second-partner" href="">
+            <img class="partner-img second-partner-img" src="img/our-partners-img-2.png" width="209" height="87" alt="second-partner">
+          </a>
+          <a class="partner third-partner" href="">
+            <img class="partner-img third-partner-img" src="img/our-partners-img-3.png" width="185" height="52" alt="third-partner">
+          </a>
+          <a class="partner fourth-partner" href="">
+            <img class="partner-img fourth-partner-img" src="img/our-partners-img-4.png" width="173" height="84" alt="fourth=partner">
+          </a>
+        </section>
+      </div>
+      <!--БЛОК - КАРТА-->
+      <section class="map">
+        <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.598942412367!2d30.320894615677194!3d59.93879686904843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1494176905800" style="border:0" allowfullscreen></iframe>
+        <div class="map-container container">
+          <div class="contacts">
+            <strong class="contacts-header">
+              NЁRDS DESIGN STUDIO
+            </strong>
+            <address class="address">
+              191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+              <span class="telephone">
+                тел. +7 (812) 275-75-75
+              </span>
+            </address>
+            <a class="btn address-btn" href="write-us.html">
+              Напишите нам
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!--РАЗДЕЛ - ПОДВАЛ САЙТА-->
+    <footer class="index-footer">
+      <div class="footer-container container">
+        <!--БЛОК - СЛЕВА-->
+        <div class="social-networks">
+          <a class="btn btn-vk" href="#" aria-label="ВКонтакте"></a>
+          <a class="btn btn-fb" href="#" aria-label="Фейсбук"></a>
+          <a class="btn btn-inst" href="#" aria-label="Инстарам"></a>
+        </div>
+        <!--БЛОК - СПРАВА-->
+        <div class="invitation">
+          <span class="invitation-header">
+            Давайте дружить, это выгодно!
+          </span>
+          <span class="invitation-text">
+            Скидка 10% для друзей из социальных сетей.
+          </span>
+        </div>
+      </div>
+    </footer>
+    <!--МОДАЛЬНОЕ ОКНО-->
+    <div class="modal-content">
+      <form class="modal-content-form">
+        <button class="modal-content-close" type="button" title="Закрыть">
+          Закрыть
+        </button>
+        <b class="modal-content-title">
+          Напишите нам
+        </b>
+        <div class="modal-forms-inner-container">
+          <div class="left-side-form">
+            <label class="label-your-name" for="your-name">
+              Ваше имя:
+            </label>
+            <input class="modal-content-name-input" type="text" name="text" placeholder="Представьтесь, пожалуйста" id="your-name">
+          </div>
+          <div class="right-side-form">
+            <label class="label-your-e-mail" for="your-e-mail">
+              Ваш e-mail:
+            </label>
+            <input class="modal-content-email-input" type="email" placeholder="Для отправки ответа" id="your-e-mail">
+          </div>
+        </div>
+        <label class="label-your-text" for="your-text">
+          Текст письма:
+        </label>
+        <textarea class="modal-content-text-area" name="comment" id="your-text">В свободной форме</textarea>
+        <input class="modal-content-submit" type="submit" value="Отправить">
+      </form>
+    </div>
+    <script src="js/script.min.js" type="text/javascript"></script>
+  </body>
+</html>

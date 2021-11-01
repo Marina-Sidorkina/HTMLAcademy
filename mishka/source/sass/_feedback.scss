@@ -1,0 +1,316 @@
+.feedback {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 320px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: $default-font;
+  font-weight: 700;
+  color: $black;
+  background-color: $white;
+}
+
+.feedback__container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feedback::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 6px;
+  background: transparent url("../img/bg-zigzag-line.svg") repeat-x;
+}
+
+.feedback__title {
+  box-sizing: border-box;
+  margin: 0 0 0 -1px;
+  padding: 27.5px 0 0;
+  min-height: 81px;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.feedback__details {
+  padding: 0;
+  margin: 0;
+}
+
+.feedback__text {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  padding-left: 1px;
+  font-family: $default-font;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 30px;
+  color: $gray;
+}
+
+.feedback__cite {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback__author {
+  margin-left: 0.5px;
+  padding-top: 26px;
+  font-family: $default-font;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 17px;
+  line-height: 24px;
+  color: $black;
+}
+
+.feedback__email {
+  position: relative;
+  padding-top: 3px;
+  font-family: $default-font;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 17px;
+  line-height: 30px;
+  color: $gray;
+}
+
+.feedback__toggle {
+  display: flex;
+  box-sizing: border-box;
+  width: 260px;
+  height: 52px;
+  margin-top: 29.5px;
+  line-height: 0;
+  border: 1px solid $gray--light;
+}
+
+.feedback__arrow {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  width: 130px;
+  height: 50px;
+  margin: 0;
+  padding: 0 0 0 38px;
+  border: none;
+  background-color: $white;
+  cursor: pointer;
+  outline: transparent;
+}
+
+.feedback__arrow--left {
+  width: 132px;
+  border-right: 1px solid $gray--light;
+}
+
+.feedback__arrow--right {
+  width: 128px;
+  padding-left: 37px;
+}
+
+.feedback__svg {
+  width: 50px;
+  height: 26px;
+  fill: $black;
+}
+
+.feedback__arrow:hover .feedback__svg {
+  opacity: 0.6;
+}
+
+.feedback__arrow:active .feedback__svg {
+  opacity: 0.3;
+}
+
+.feedback__add-link {
+  box-sizing: border-box;
+  width: 260px;
+  height: 52px;
+  margin-top: 38px;
+  margin-bottom: 51px;
+  margin-left: 0.5px;
+  padding-top: 13.5px;
+  font-family: $default-font;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: $gray;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid $gray;
+}
+
+.feedback__add-link:hover {
+  color: $white;
+  background-color: $gray;
+}
+/*Светлый тон фона кнопки задан через opacity,
+так как в фотошопе он определяется как №444444 ($gray),
+то есть как и у ховера, но визуально явно светлей*/
+.feedback__add-link:active {
+  color: rgba(255, 255, 255, 0.302);
+  background-color: $gray;
+}
+
+@media (min-width: $tablet-width) {
+  .feedback {
+    width: $tablet-width;
+    margin-bottom: 45px;
+    padding-bottom: 85px;
+  }
+
+  .feedback__container {
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: $tablet-width;
+    padding-left: 47px;
+    padding-right: 50px;
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: top left;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/review@2x.jpg");
+      background-size: 350px 457px;
+    }
+  }
+
+  .feedback::after {
+    bottom: 0;
+    width: 100%;
+    height: 17px;
+    background: url("../img/bg-zigzag-line.svg") repeat-x;
+    background-position: 0 0;
+    background-size: 768px 17px;
+    transform: rotate(180deg);
+  }
+
+  .feedback__title {
+    width: 490px;
+    height: 165px;
+    padding-top: 76px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .feedback__add-link {
+    order: 1;
+    width: 175px;
+    margin-top: 79px;
+    margin-left: 7px;
+    font-size: 17px;
+    line-height: 20px;
+  }
+
+  .feedback__details {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    order: 2;
+    width: 100%;
+  }
+
+  .feedback__text {
+    width: 100%;
+    min-height: 135px;
+    margin-top: -6px;
+    margin-left: 1px;
+    padding-top: 0;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .feedback__cite {
+    width: 477px;
+    min-height: 145px;
+  }
+
+  .feedback__author {
+    margin-top: 16px;
+    margin-left: 3px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .feedback__email {
+    display: block;
+    margin-left: 3px;
+    margin-top: 0;
+    font-size: 17px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 30px;
+  }
+
+  .feedback__toggle {
+    width: 175px;
+    margin-top: 45px;
+    margin-right: -1px;
+    border: none;
+  }
+
+  .feedback__arrow--left {
+    border: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feedback {
+    width: $desktop-content-width;
+    margin-bottom: 71px;
+    padding-bottom: 90px;
+  }
+
+  .feedback::after {
+    bottom: 0;
+    width: 100%;
+    height: 26px;
+    background: url("../img/bg-zigzag-line.svg") repeat-x;
+    background-position: 0 0;
+    background-size: 1050px 26px;
+    transform: rotate(180deg);
+  }
+
+  .feedback__container {
+    width: $desktop-content-width;
+    min-height: 457px;
+    padding: 0 0 0 175px;
+  }
+
+  .feedback__title {
+    padding-top: 70px;
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .feedback__add-link {
+    margin-left: 211px;
+  }
+
+  .feedback__text {
+    padding-right: 86px;
+  }
+
+  .feedback__author {
+    margin-top: -33px;
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  .feedback__toggle {
+    margin-left: 205px;
+    margin-top: -3px;
+  }
+}
